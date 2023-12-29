@@ -15,10 +15,26 @@ function App(): React.JSX.Element {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Splash" component={SplashScreen} />
-        <Stack.Screen name="Home" component={HomeScreenWithTabs} />
-        <Stack.Screen name="Cards" component={CardsScreen} />
-        <Stack.Screen name="Practise" component={PractiseScreen} />
-        <Stack.Screen name="Settings" component={SettingsScreen} />
+        <Stack.Screen
+          name="Home"
+          component={HomeScreenWithTabs}
+          options={{headerTitle: 'Home', headerShown: false}}
+        />
+        <Stack.Screen
+          name="Cards"
+          component={CardsScreen}
+          options={{headerTitle: 'Cards', headerShown: false}}
+        />
+        <Stack.Screen
+          name="Practise"
+          component={PractiseScreen}
+          options={{headerTitle: 'Practise', headerShown: false}}
+        />
+        <Stack.Screen
+          name="Settings"
+          component={SettingsScreen}
+          options={{headerTitle: 'Settings', headerShown: false}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
